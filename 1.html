@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+</script>
+<script type="text/javascript">
+	$(function(){
+			var chuan=["guangan","chengdu","mianyang"];
+			var hu=["1","2","3"];
+			var he=["a","b","c"];
+			$("#select").change(function(){
+					var select_val = $(this).val();
+					if(select_val == "option")
+					{
+						$("#child").empty();	
+					}
+					else if(select_val == "chuan")
+					{
+						$("#child").empty();
+						for(var i=0 ; i<chuan.length ; i++){
+							var option = $("<option>").val(chuan[i]).text(chuan[i]);	
+							$("#child").append(option);
+						}
+					}
+					else if(select_val == "hu")
+					{
+						$("#child").empty();
+						for(var i=0 ; i<hu.length ; i++){
+							var option1 = $("<option>").val(hu[i]).text(hu[i]);	
+							$("#child").append(option2);
+						}
+					}
+					else if(select_val == "he")
+					{
+						$("#child").empty();
+						for(var i=0 ; i<he.length ; i++){
+							var option2 = $("<option>").val(he[i]).text(he[i]);	
+							$("#child").append(option2);
+						}
+					}
+				
+				})
+		})
+</script>
+</head>
+
+<body>
+<div id="odiv">
+	<select id="select" style="width:100px">
+    	<option value="option">choose</option>
+        <option value="chuan">chuan</option>
+        <option value="hu">hu</option>
+        <option value="he">he</option>
+    </select>
+    
+    <select id="child" style="width:100px">
+    </select>
+    </div>
+</body>
+</html>
